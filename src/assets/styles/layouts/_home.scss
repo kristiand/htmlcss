@@ -1,132 +1,74 @@
-* {
-  box-sizing: border-box;
+
+body {
+    /*font-family: Arial, sans-serif;*/
+    line-height: 1.6;
+    color: #333;
 }
 
-.body {
-  /* Bloque principal para el cuerpo de la página */
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: $primary-color;
-  background-color: $background;
-
-  @media (max-width: $mqMaxWidth) {
-    width: fit-content;
-  }
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
 }
 
-.container {
-  /* Bloque principal de contenedor */
-  max-width: 1200px;
-  padding: 2em 4em;
-  margin: auto;
-  font-size: 1.2em;
-  line-height: 1.5em;
-  text-align: center;
-  background-color: $secundary-color;
-
-  @media (max-width: $mqMaxWidth) {
-    font-size: 1.7em;
-  }
+header {
+    grid-area: header;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
 }
 
-.container__btn {
-  /* Elemento botón dentro del bloque container */
-  padding: 0.5em 0.8em;
-  color: $secundary-color;
-  text-decoration: none;
-  background: $btn-bg;
-  border-radius: 5px;
+main {
+    grid-area: main;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
-.container__btn:hover {
-  background: $btn-bg-hover;
+aside {
+    grid-area: aside;
+    background-color: #e0e0e0;
+    padding: 20px;
 }
 
-
-.header {
-  /* Bloque principal para el encabezado */
-  background: url(../images/home_abaltzisketa_aralar_1800.webp) no-repeat center;
-
-  @media (max-width: $mqMaxWidth) {
-    background: none;
-    background-color:#000;
-  }
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 20px;
 }
 
-.cabecera {
-  /* Bloque para la cabecera */
-  height: 80px;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.cabecera__titulo {
-  /* Elemento título dentro del bloque cabecera */
-  float: left;
-  width: auto;
-  padding: 0;
-  margin-top: 0.2em;
-  margin-left: 1.5em;
-  font-size: 2.8em;
-  font-weight: 300;
-  line-height: 1em;
-  color: $secundary-color;
+.poster {
+    background-image: url('https://via.placeholder.com/800x400');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.cabecera__texto {
-  /* Elemento subtítulo dentro del bloque cabecera */
-  position: absolute;
-  top: 60px;
-  text-shadow: 1px 1px 10px #000;
-}
+@supports not (display: grid) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
 
-.intro {
-  /* Bloque principal de sección introductoria */
-  width: 80%;
-  padding: 0.5em 1em;
-  margin: 6em auto 0;
-  font-size: 1.2em;
-  font-style: italic;
-  line-height: 1.5em;
-  color: #FFF;
-  background-color: #000;
-  opacity: 80%;
-
-  @media (max-width: $mqMaxWidth) {  
-      margin: 2em auto 0;
-      font-size: 1.7em;
-  }
-
-}
-
-.destacados__destacado {
-  /* Bloque destacado */
-  margin: 3em 0;
-}
-
-.footer {
-  /* Bloque para el pie de página */
-  width: 100%;
-  margin-top: 4em;
-  color: $secundary-color;
-  text-align: center;
-  background-color: #000;
-
-  @media (max-width: $mqMaxWidth) {
-    padding: 1em;
-    font-size:1.3em;
-  }
-}
-
-.footer__link {
-  /* Elemento enlace dentro del bloque footer */
-  color: #fff;
-}
-
-.footer__link:hover {
-  text-decoration: none;
+    main, aside {
+        width: 100%;
+    }
 }
