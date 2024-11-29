@@ -1,77 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>Jornadas de Seguridad Informática</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portada - Jornadas de Seguridad Informática</title>
+  <link rel="stylesheet" href="./assets/styles/main.scss">
 </head>
 <body>
-    <div class="grid-container">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand logo" href="#">SecureTech</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Programa</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Ponentes</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Registro</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <div class="poster">
-                <h1>Jornadas de Seguridad Informática 2024</h1>
-            </div>
-            <div class="mt-4">
-                <h2>Descubre las últimas tendencias en ciberseguridad</h2>
-                <p>Únete a nosotros en estas emocionantes jornadas donde expertos de la industria compartirán sus conocimientos sobre las amenazas cibernéticas más recientes y las mejores prácticas para proteger tu información.</p>
-            </div>
-        </main>
-
-        <aside>
-            <h3>Destacados</h3>
-            <ul class="list-group">
-                <li class="list-group-item">Conferencias magistrales</li>
-                <li class="list-group-item">Talleres prácticos</li>
-                <li class="list-group-item">Networking</li>
-                <li class="list-group-item">Demostraciones en vivo</li>
-            </ul>
-        </aside>
-
-        <footer>
-            <div class="row">
-                <div class="col-md-8">
-                    <h4>Enlaces rápidos</h4>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#" class="text-light">Inicio</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-light">Programa</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-light">Ponentes</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-light">Registro</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-light">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Síguenos</h4>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#" class="text-light">Facebook</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-light">Twitter</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-light">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  <include src="./views/header.html"></include>
+  <main class="main">
+    <section class="poster">
+      <div class="poster__content">
+        <h2 class="poster__title">¡Únete a las jornadas más innovadoras del año!</h2>
+        <p class="poster__text">
+          Descubre las últimas tendencias en ciberseguridad, participa en talleres interactivos, 
+          y escucha a expertos de renombre internacional.
+        </p>
+        <a href="formulario.html" class="poster__cta">¡Regístrate ahora!</a>
+      </div>
+    </section>
+  </main>
+<include src="./views/footer.html"></include>
+<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 </html>

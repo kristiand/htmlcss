@@ -1,0 +1,57 @@
+@layer pages {
+  .participants {
+    padding: 2rem;
+    text-align: center;
+
+    &__title {
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 2rem;
+    }
+
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .participant {
+      background: $background-color;
+      border: 1px solid $primary-color;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      width: calc(33.333% - 2rem);
+      max-width: 300px;
+      text-align: left;
+
+      @media (max-width: $breakpoint-md) {
+        width: calc(50% - 2rem);
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 100%;
+      }
+
+      &__image {
+        width: 100%;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      &__name {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: $secondary-color;
+      }
+
+      &__bio {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $text-color;
+      }
+    }
+  }
+}

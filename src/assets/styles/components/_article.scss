@@ -1,0 +1,87 @@
+@layer components {
+  .article {
+    margin: 2rem auto;
+    max-width: 800px;
+    line-height: 1.8;
+
+    &__header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+
+      &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primary-color;
+      }
+
+      &__date {
+        font-size: 0.875rem;
+        color: gray;
+      }
+    }
+
+    &__content {
+      p {
+        margin-bottom: 1.5rem;
+      }
+
+      a {
+        color: $secondary-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .article__image {
+        margin: 2rem 0;
+        img {
+          width: 100%;
+          border-radius: 4px;
+        }
+        figcaption {
+          font-size: 0.875rem;
+          text-align: center;
+          color: gray;
+        }
+      }
+
+      .article__quote {
+        font-style: italic;
+        border-left: 4px solid $primary-color;
+        padding-left: 1rem;
+        margin: 2rem 0;
+      }
+    }
+
+    &__footer {
+      margin-top: 2rem;
+
+      &__subtitle {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+
+      &__list {
+        padding-left: 1.5rem;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@layer components {
+  /* Uso de pseudoclases */
+  .article:has(.article__quote) {
+    border: 1px solid $primary-color;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .article__list:is(ul, ol) {
+    list-style-type: disc;
+  }
+}

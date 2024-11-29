@@ -1,0 +1,19 @@
+@layer components {
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-unit;
+  
+      &__input, &__textarea {
+        padding: 0.5rem;
+        border: 1px solid $text-color;
+        border-radius: 4px;
+      }
+  
+      &__submit {
+        @extend .btn;
+        background: $secondary-color;
+      }
+    }
+  }
+  

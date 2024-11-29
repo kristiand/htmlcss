@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Inscripción - Jornadas de Seguridad Informática</title>
+  <link rel="stylesheet" href="./assets/styles/main.scss">
+</head>
+<body>
+  <include src="./views/header.html"></include>
+
+  <main class="main">
+    <section class="formulario">
+      <h2 class="formulario__title">Inscríbete en las Jornadas</h2>
+      <form action="#" method="post" class="formulario__form">
+        <label for="nombre" class="formulario__label">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" class="formulario__input" required>
+
+        <label for="email" class="formulario__label">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" class="formulario__input" required>
+
+        <label for="taller" class="formulario__label">Selecciona un Taller:</label>
+        <select id="taller" name="taller" class="formulario__input">
+          <option value="ciberseguridad-basica">Ciberseguridad Básica</option>
+          <option value="inteligencia-artificial">Inteligencia Artificial y Seguridad</option>
+          <option value="hacking-etico">Hacking Ético</option>
+        </select>
+
+        <label for="mensaje" class="formulario__label">Mensaje Adicional:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" class="formulario__textarea"></textarea>
+
+        <button type="submit" class="formulario__submit">Enviar Inscripción</button>
+      </form>
+    </section>
+  </main>
+
+  <include src="./views/footer.html"></include>
+</body>
+</html>

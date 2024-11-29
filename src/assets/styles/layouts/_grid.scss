@@ -1,0 +1,14 @@
+@layer layout {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: $spacing-unit;
+  
+      @supports not (display: grid) {
+        /* Fallback */
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  

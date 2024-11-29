@@ -1,0 +1,13 @@
+@layer layout {
+    .footer {
+      background: $secondary-color;
+      padding: $spacing-unit;
+      color: white;
+      text-align: center;
+  
+      &__text {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  

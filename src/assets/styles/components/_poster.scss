@@ -1,0 +1,20 @@
+@layer components {
+    .poster {
+      display: grid;
+      place-items: center;
+      background: url('../images/security-poster.jpg') no-repeat center/cover;
+      padding: 4rem;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  
+      &__title {
+        font-size: 3rem;
+        margin-bottom: $spacing-unit;
+      }
+  
+      &__cta {
+        @extend .btn;
+      }
+    }
+  }
+  
