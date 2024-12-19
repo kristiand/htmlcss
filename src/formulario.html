@@ -10,30 +10,49 @@
   <include src="./views/header.html"></include>
 
   <main class="main">
+    <div class="container">
     <section class="formulario">
       <h2 class="formulario__title">Inscríbete en las Jornadas</h2>
-      <form action="#" method="post" class="formulario__form">
-        <label for="nombre" class="formulario__label">Nombre Completo:</label>
-        <input type="text" id="nombre" name="nombre" class="formulario__input" required>
-
-        <label for="email" class="formulario__label">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" class="formulario__input" required>
-
-        <label for="taller" class="formulario__label">Selecciona un Taller:</label>
-        <select id="taller" name="taller" class="formulario__input">
+      <form action="#" method="post" class="formulario__form" netlify>
+        <div class="mb-3">
+        <label for="nombre" class="formulario__form__label form-label">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" class="formulario__form__input form-control" required>
+        </div>
+        <div class="mb-3">
+        <label for="email" class="formulario__form__label form-label">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" aria-describedby="emailHelp" class="formulario__form__input form-control" required >
+        <div id="emailHelp" class="form-text">En este email recibirás la confirmación</div>
+        </div>
+        <div class="mb-3">
+        <label for="taller" class="formulario__form__label form-label">Selecciona un Taller:</label>
+        <select id="taller" name="taller" class="formulario__form__input form-select">
           <option value="ciberseguridad-basica">Ciberseguridad Básica</option>
           <option value="inteligencia-artificial">Inteligencia Artificial y Seguridad</option>
           <option value="hacking-etico">Hacking Ético</option>
         </select>
+        </div>
+        <div class="mb-3">
+        <label for="mensaje" class="formulario__form__label form-label">Mensaje Adicional:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" class="formulario__form__textarea form-control"></textarea>
+        </div>
 
-        <label for="mensaje" class="formulario__label">Mensaje Adicional:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" class="formulario__textarea"></textarea>
-
-        <button type="submit" class="formulario__submit">Enviar Inscripción</button>
+        <button type="submit" class="formulario__form__button btn btn-secondary">Enviar</button>
       </form>
+      <div class="mb-3">
+        <a class="btn btn-link" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Nota legal
+        </a>
+        <div class="collapse" id="collapse">
+          <div class="card">
+            Los datos recogidos en este formulario solamente se utilizarán para la comunicación con el interesado, en ningún caso se proporcionarán a terceros.
+          </div>
+        </div>
+      </div>
     </section>
+  </div>
   </main>
 
   <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 </html>

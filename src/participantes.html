@@ -10,29 +10,58 @@
   <include src="./views/header.html"></include>
 
   <main class="main">
+    <div class="container">
     <section class="participants">
       <h2 class="participants__title">Conoce a nuestros participantes destacados</h2>
       <div class="participants__grid">
-        <article class="participant">
-          <img src="https://picsum.photos/id/40/4106/2806" alt="Foto de participante 1" class="participant__image">
-          <h3 class="participant__name">Dr. Ana López</h3>
-          <p class="participant__bio">Experta en ciberseguridad financiera y profesora en la Universidad de Tecnología.</p>
-        </article>
-        <article class="participant">
-          <img src="https://picsum.photos/id/40/4106/2806" alt="Foto de participante 2" class="participant__image">
-          <h3 class="participant__name">Juan Martínez</h3>
-          <p class="participant__bio">Consultor de seguridad en infraestructuras críticas con más de 15 años de experiencia.</p>
-        </article>
-        <article class="participant">
-          <img src="https://picsum.photos/id/40/4106/2806" alt="Foto de participante 3" class="participant__image">
-          <h3 class="participant__name">Laura Fernández</h3>
-          <p class="participant__bio">Investigadora en inteligencia artificial aplicada a la detección de amenazas.</p>
-        </article>
-        <!-- Agregar más participantes según sea necesario -->
+        
+        
+        <include src="./views/participant.html">
+          {
+          "participant_link": "https://avatar.iran.liara.run/public/60",
+          "participant_name" : "Dr. Ana López",
+          "participant_bio" : "Experta en ciberseguridad financiera y profesora en la Universidad de Tecnología."
+          }
+        </include>
+
+        <include src="./views/participant.html">
+          {
+          "participant_link": "https://avatar.iran.liara.run/public/33",
+          "participant_name" : "Juan Martínez",
+          "participant_bio" : "Consultor de seguridad en infraestructuras críticas con más de 15 años de experiencia."
+          }
+        </include>
+
+        <include src="./views/participant.html">
+          {
+          "participant_link": "https://avatar.iran.liara.run/public/67",
+          "participant_name" : "Laura Fernández",
+          "participant_bio" : "Investigadora en inteligencia artificial aplicada a la detección de amenazas."
+          }
+        </include>
+
+        <include src="./views/participant.html">
+          {
+          "participant_link": "https://avatar.iran.liara.run/public/50",
+          "participant_name" : "Antonio Lucas",
+          "participant_bio" : "Consultor de seguridad en en la administración pública, con más de 25 años de experiencia."
+          }
+        </include>
+
+        <include src="./views/participant.html">
+          {
+          "participant_link": "https://avatar.iran.liara.run/public/37",
+          "participant_name" : "José Alonso",
+          "participant_bio" : "Programador y experto en inteligencia artificial aplicada a la detección de amenazas."
+          }
+        </include>
+
       </div>
     </section>
+  </div>
   </main>
 
   <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 </html>

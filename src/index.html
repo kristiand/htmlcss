@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portada - Jornadas de Seguridad Informática</title>
-  <link rel="stylesheet" href="./assets/styles/main.scss">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>SecureWeek: Jornadas de Seguridad Informática</title>
+    
 </head>
-<body>
-  <include src="./views/header.html"></include>
-  <main class="main">
-    <section class="poster">
-      <div class="poster__content">
-        <h2 class="poster__title">¡Únete a las jornadas más innovadoras del año!</h2>
-        <p class="poster__text">
-          Descubre las últimas tendencias en ciberseguridad, participa en talleres interactivos, 
-          y escucha a expertos de renombre internacional.
-        </p>
-        <a href="formulario.html" class="poster__cta">¡Regístrate ahora!</a>
-      </div>
-    </section>
-  </main>
-<include src="./views/footer.html"></include>
-<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+<body class="bg-gray-100 font-sans">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
+        <header class="col-span-full bg-blue-600 text-white p-4">
+            <include src="./views/header.html"></include>
+        </header>
+        <main class="col-span-full md:col-span-3 bg-white p-6 rounded-lg shadow-md">
+            <include src="./views/poster.html"></include>
+        </main>
+
+        <aside class="bg-white p-6 rounded-lg shadow-md">
+            <include src="./views/register_box.html"></include>
+        </aside>
+        <footer class="bg-gray-800 text-white p-6">
+            <include src="./views/footer.html"></include>
+        </footer>
+    </div>
+
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 </html>

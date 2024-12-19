@@ -1,12 +1,12 @@
 @layer components {
   .article {
-    margin: 2rem auto;
     max-width: 800px;
+    margin: 2rem auto;
     line-height: 1.8;
 
     &__header {
-      text-align: center;
       margin-bottom: 1.5rem;
+      text-align: center;
 
       &__title {
         font-size: 2rem;
@@ -40,16 +40,16 @@
         }
         figcaption {
           font-size: 0.875rem;
-          text-align: center;
           color: gray;
+          text-align: center;
         }
       }
 
       .article__quote {
-        font-style: italic;
-        border-left: 4px solid $primary-color;
         padding-left: 1rem;
         margin: 2rem 0;
+        font-style: italic;
+        border-left: 4px solid $primary-color;
       }
     }
 
@@ -57,9 +57,9 @@
       margin-top: 2rem;
 
       &__subtitle {
+        margin-bottom: 1rem;
         font-size: 1.5rem;
         color: $primary-color;
-        margin-bottom: 1rem;
       }
 
       &__list {
@@ -75,10 +75,10 @@
 
 @layer components {
   /* Uso de pseudoclases */
-  .article:has(.article__quote) {
-    border: 1px solid $primary-color;
-    padding: 1rem;
-    margin-top: 2rem;
+  .article:has(.article__image) {
+    padding: 2rem;
+    margin-top: 1rem;
+    border: 1px solid adjust-opacity($primary-color, 0.3);
   }
 
   .article__list:is(ul, ol) {

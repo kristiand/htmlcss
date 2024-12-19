@@ -1,12 +1,11 @@
 @layer pages {
   .participants {
+    max-width: $breakpoint-lg;
     padding: 2rem;
-    text-align: center;
-
+    margin: 2em auto;
+ 
     &__title {
-      font-size: 2rem;
-      color: $primary-color;
-      margin-bottom: 2rem;
+      text-align: center;
     }
 
     &__grid {
@@ -14,17 +13,18 @@
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
+      margin-top:2em;
     }
 
     .participant {
+      width: calc(33.333% - 2rem);
+      max-width: 300px;
+      padding: 1.5rem;
+      text-align: left;
       background: $background-color;
       border: 1px solid $primary-color;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      width: calc(33.333% - 2rem);
-      max-width: 300px;
-      text-align: left;
 
       @media (max-width: $breakpoint-md) {
         width: calc(50% - 2rem);
@@ -36,14 +36,14 @@
 
       &__image {
         width: 100%;
-        border-radius: 50%;
         margin-bottom: 1rem;
+        border-radius: 50%;
       }
 
       &__name {
+        margin-bottom: 0.5rem;
         font-size: 1.25rem;
         font-weight: bold;
-        margin-bottom: 0.5rem;
         color: $secondary-color;
       }
 

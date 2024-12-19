@@ -1,12 +1,22 @@
-@layer layout {
+@layer layouts {
     .footer {
-      background: $secondary-color;
       padding: $spacing-unit;
+      margin-top: 2em;
       color: white;
-      text-align: center;
+      background: #494a4a;
   
-      &__text {
+      &__name__text {
         font-size: 0.875rem;
+      }
+
+      &__social__list__item {
+        display: inline;
+        padding: 0 .5em;
+        
+        a {
+          color: #FFF !important;
+          text-decoration: none !important;
+        }
       }
     }
   }

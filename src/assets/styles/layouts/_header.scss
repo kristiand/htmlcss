@@ -1,25 +1,13 @@
-@layer layout {
-    .header {
-      background: $primary-color;
+@layer layouts {
+  .header {
       padding: $spacing-unit;
-      text-align: center;
       color: white;
+      text-align: center;
+      background: $primary-color;
   
-      &__title {
-        font-size: 2.5rem;
-      }
-  
-      &__nav {
-        margin-top: $spacing-unit;
-        
-        .nav__link {
-          margin: 0 $spacing-unit;
-          color: white;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
+      &__nav__title {
+        font-size: 1.5rem !important;
+      }  
     }
   }
   

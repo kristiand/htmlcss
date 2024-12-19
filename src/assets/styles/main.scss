@@ -1,56 +1,6 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
-/**
- * Import npm dependencies
- * see: https://v2.parceljs.org/features/module-resolution/
- * see commented examples below
- */
- @import "npm:@fortawesome/fontawesome-free/css/all.css";
- 
- // Import all of Bootstrap's CSS
- @import "bootstrap/scss/bootstrap";
-
- // @import "some-node-module";
-// @import "@some-company/some-node-module";
-
-/* ======================================
-   Importaciones de estilos base
-====================================== */
-@import "base/reset";
-@import "base/variables";
-@import "base/typography";
-@import "base/global";
-
-/* ======================================
-   Importaciones de estilos de layout
-====================================== */
-@import "layouts/grid";
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/container-queries";
-
-/* ======================================
-   Importaciones de componentes
-====================================== */
-@import "components/buttons";
-@import "components/forms";
-@import "components/cards";
-@import "components/poster";
-@import "components/article";
-
-
-/* ======================================
-   Importaciones de páginas específicas
-====================================== */
-@import "pages/home";
-@import "pages/participantes";
-@import "pages/informacion";
-@import "pages/formulario";
+@tailwind base;
+@tailwind components;
 
 
 
-/**
- * Do NOT include anything else in this file!
- */
+@tailwind utilities;

@@ -1,11 +1,21 @@
 @layer base {
+
+    body {
+      font-size: 1rem; /* Tamaño base */
+
+    }
     h1, h2, h3, h4, h5, h6 {
       font-weight: bold;
       line-height: 1.2;
+
     }
   
     p {
       margin-bottom: 1rem;
+
+      @container (max-width: 768px) {
+        font-size: 1.1rem !important; /* Aumentar el tamaño en contenedores pequeños */
+      }
     }
   
     a {
@@ -16,4 +26,5 @@
       }
     }
   }
+
   

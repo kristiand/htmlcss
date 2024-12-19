@@ -2,18 +2,24 @@
     .poster {
       display: grid;
       place-items: center;
+      padding: 1rem;
       background: url('../images/security-poster.jpg') no-repeat center/cover;
-      padding: 4rem;
-      color: white;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
   
       &__title {
+        padding: $spacing-unit;
         font-size: 3rem;
-        margin-bottom: $spacing-unit;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
       }
-  
-      &__cta {
-        @extend .btn;
+
+      &__description {
+        padding: $spacing-unit;
+        margin-top:4em;
+        background-color: #00000090;
+        border-radius: 8px;
+      }
+
+      @media (min-width: $breakpoint-md){
+        padding: 4rem;
       }
     }
   }
