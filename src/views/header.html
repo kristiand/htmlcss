@@ -1,12 +1,51 @@
-
+ <!--
     <h1 class="text-3xl font-bold">SecureWeek</h1>
     <nav class="mt-2">
         <ul class="flex space-x-4">
             <li><a href="index.html" class="hover:underline">Inicio</a></li>
-            <li><a href="participantes.html" class="hover:underline">Participantes</a></li>
-            <li><a href="informacion.html" class="hover:underline">Concurso</a></li>
+            <li><a href="informacion.html" class="hover:underline">Información</a></li>
+            <li><a href="formulario.html" class="hover:underline">Formulario</a></li>
         </ul>
     </nav>
+-->
+    
+    
+   
+    
+    <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+ 
+        <a href="/" class="flex items-center space-x-2">
+            <img alt="Logo SecureWeek" src="./assets/images/logo-secureweek.svg" class="h-8">
+            <span class="text-lg font-bold">SecureWeek</span>
+        </a>
+
+       
+        <button 
+            class="md:hidden text-white focus:outline-none" 
+            id="menu-toggle" 
+            aria-controls="navbarNav" 
+            aria-expanded="false"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        
+        <div 
+            id="navbarNav" 
+            class="hidden md:flex flex-col md:flex-row md:space-x-6 md:items-center"
+        >
+            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                <li><a href="/" class="nav-link text-white hover:underline">Inicio</a></li>
+                <li><a href="./participantes.html" class="nav-link text-white hover:underline">Participantes</a></li>
+                <li><a href="./informacion.html" class="nav-link text-white hover:underline">Concurso</a></li>
+                <li><a href="./formulario.html" class="nav-link text-white hover:underline">Inscripción</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
 
 
 <!--
